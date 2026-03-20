@@ -131,22 +131,49 @@
 
 //WRITE A PROGRAM TO DELETE AN ELEMENT IN AN ARRAY AT THE END
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(){
-    int num;
+// int main(){
+//     int num;
+//     int arr[100];
+//     printf("ENTER THE ELEMENT OF THE ARRAY:");
+//     scanf("%d",&num);
+//     if(num>=100 || num<=0){
+//         printf("INVALID NUMBER");
+//         return 0;
+//     }
+//     for(int i=0;i<num;i++){
+//         printf("ENTER THE %d INDEX VALUE:",i+1);
+//         scanf("%d",&arr[i]);
+//     }
+//     for(int i=0;i<num-1;i++){
+//         printf("%d\t",arr[i]);
+//     }
+// }
+
+
+//WRITE A PROGRAM TO DELETE AN ELEMENT IN AN ARRAY AT THE SPECIFIC POSITION
+
+   #include <stdio.h>
+   int main(){
+    int num,position;
     int arr[100];
-    printf("ENTER THE ELEMENT OF THE ARRAY:");
+    printf("ENTER THE NUMBER OF THE ELEMENT IN THE ARRAY:");
     scanf("%d",&num);
     if(num>=100 || num<=0){
         printf("INVALID NUMBER");
         return 0;
     }
     for(int i=0;i<num;i++){
-        printf("ENTER THE %d INDEX VALUE:",i+1);
         scanf("%d",&arr[i]);
+    }
+    printf("ENTER THE POSITION WHICH YOU WANT TO DELETE:");
+    scanf("%d",&position);
+    for(int i=position-1;i<num;i++){
+        arr[i]=arr[i+1];
     }
     for(int i=0;i<num-1;i++){
         printf("%d\t",arr[i]);
     }
-}
+    return 0;
+   }
