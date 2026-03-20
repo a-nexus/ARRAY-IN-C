@@ -48,26 +48,57 @@
 //THE THIRD PART 
 //DELETION AT A SPECIFIC PLACE
 
+// #include <stdio.h>
+// #include <conio.h>
+
+// int main(){
+//     int arr[100],num,del;
+//     printf("ENTER THE SIZE OF THE ARRAY:");
+//     scanf("%d",&num);
+//     for(int i=0;i<num;i++){
+//         printf("%d indexed value=",i+1);
+//         scanf("%d",&arr[i]);
+//     }
+//     printf("ENTER THE SPECIFIC INDEX ADDRESS WHICH YOU WANT TO CHANGE:");
+//     scanf("%d",&del);
+   
+//     for(int i=del-1;i<num;i++){
+//         arr[i]=arr[i+1];
+//     }
+//     num--;
+//      for(int i=0;i<num;i++){
+//         printf("%d\t",arr[i]);
+//      }
+// return 0;
+// }
+
+//WRITE A PROGRAM TO INSERT AN ELEMENT IN AN ARRAY AT THE SPECIFIC POSITION
+
 #include <stdio.h>
-#include <conio.h>
 
 int main(){
-    int arr[100],num,del;
-    printf("ENTER THE SIZE OF THE ARRAY:");
+    int num,tar,position;
+    int arr[100];
+    printf("ENTER THE SIZE OF THE ARRAY BETWEEN 100 AND 0:");
     scanf("%d",&num);
+    if(num>100 || num<=0 ){
+        printf("INVALID NUMBER");
+        return 0;
+    }
     for(int i=0;i<num;i++){
-        printf("%d indexed value=",i+1);
+        printf("ENTER THE %d INDEXED VALUE:",i+1);
         scanf("%d",&arr[i]);
     }
-    printf("ENTER THE SPECIFIC INDEX ADDRESS WHICH YOU WANT TO CHANGE:");
-    scanf("%d",&del);
-   
-    for(int i=del-1;i<num;i++){
-        arr[i]=arr[i+1];
+    printf("ENTER THE POSITION WHERE YOU WANT TO ADD A NUMBER:");
+    scanf("%d",&position);
+    printf("ENTER THE TARGETED VALUE:");
+    scanf("%d",&tar);
+    for(int i=num;i>=position-1;i--){
+        arr[i]=arr[i-1];
     }
-    num--;
-     for(int i=0;i<num;i++){
+    arr[position-1]=tar;
+    for(int i=0;i<=num;i++){
         printf("%d\t",arr[i]);
-     }
-return 0;
+    }
+    return 0;
 }
