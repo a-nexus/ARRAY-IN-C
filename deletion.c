@@ -105,23 +105,46 @@
 
 //WRITE A PROGRAM TO DELETE AN ELEMENT IN AN ARRAY AT THE BEGINNING
 
+// #include <stdio.h>
+
+// int main(){
+//     int num;
+//     int arr[100];
+//     printf("ENTER THE NUMBER OF THE ELEMENT OF THE ARRAY:");
+//     scanf("%d",&num);
+//     if(num>100 || 0>=num){
+//         printf("INVALID NUMBER");
+//         return 0;
+//     }
+//     for(int i=0;i<num;i++){
+//         printf("ENTER THE %d INDEXED VALUE:",i+1);
+//         scanf("%d",&arr[i]);
+//     }
+//     for(int i=0;i<num;i++){
+//         arr[i]=arr[i+1];
+//     }
+//     for(int i=0;i<num-1;i++){
+//         printf("%d\t",arr[i]);
+//     }
+// }
+
+
+//WRITE A PROGRAM TO DELETE AN ELEMENT IN AN ARRAY AT THE END
+
 #include <stdio.h>
 
 int main(){
     int num;
     int arr[100];
-    printf("ENTER THE NUMBER OF THE ELEMENT OF THE ARRAY:");
+    printf("ENTER THE ELEMENT OF THE ARRAY:");
     scanf("%d",&num);
-    if(num>100 || 0>=num){
+    if(num>=100 || num<=0){
         printf("INVALID NUMBER");
         return 0;
     }
     for(int i=0;i<num;i++){
-        printf("ENTER THE %d INDEXED VALUE:",i+1);
+        printf("ENTER THE %d INDEX VALUE:",i+1);
         scanf("%d",&arr[i]);
-    }
-    for(int i=0;i<num;i++){
-        arr[i]=arr[i+1];
     }
     for(int i=0;i<num-1;i++){
         printf("%d\t",arr[i]);
