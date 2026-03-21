@@ -154,26 +154,58 @@
 
 //WRITE A PROGRAM TO DELETE AN ELEMENT IN AN ARRAY AT THE SPECIFIC POSITION
 
-   #include <stdio.h>
-   int main(){
-    int num,position;
-    int arr[100];
-    printf("ENTER THE NUMBER OF THE ELEMENT IN THE ARRAY:");
-    scanf("%d",&num);
-    if(num>=100 || num<=0){
-        printf("INVALID NUMBER");
+//    #include <stdio.h>
+//    int main(){
+//     int num,position;
+//     int arr[100];
+//     printf("ENTER THE NUMBER OF THE ELEMENT IN THE ARRAY:");
+//     scanf("%d",&num);
+//     if(num>=100 || num<=0){
+//         printf("INVALID NUMBER");
+//         return 0;
+//     }
+//     for(int i=0;i<num;i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     printf("ENTER THE POSITION WHICH YOU WANT TO DELETE:");
+//     scanf("%d",&position);
+//     for(int i=position-1;i<num;i++){
+//         arr[i]=arr[i+1];
+//     }
+//     for(int i=0;i<num-1;i++){
+//         printf("%d\t",arr[i]);
+//     }
+//     return 0;
+//    }
+
+ //WRITE A PROGRAM TO MERGE TWO ARRAYS.
+
+ #include <stdio.h>
+
+ int main(){
+    int num,num2;
+    int arr[100],arr2[100];
+    printf("ENTER THE ELEMENT OF THE 1st AND 2nd ARRAY:");
+    scanf("%d %d",&num,&num2);
+    if(num>=100 || num<=0|| num2>=100 || num2<=0){
+        printf("INVALID INPUT");
         return 0;
     }
+    printf("------FIRST ARRAY--------\n");
     for(int i=0;i<num;i++){
         scanf("%d",&arr[i]);
     }
-    printf("ENTER THE POSITION WHICH YOU WANT TO DELETE:");
-    scanf("%d",&position);
-    for(int i=position-1;i<num;i++){
-        arr[i]=arr[i+1];
+    printf("------SECOND ARRAY--------\n");
+    for(int i=0;i<num2;i++){
+        scanf("%d",&arr2[i]);
     }
-    for(int i=0;i<num-1;i++){
-        printf("%d\t",arr[i]);
+    for(int j=0;j<num+num2;j++){
+        arr[num+j]=arr2[j];
+    }
+    printf("MERGED ARRAY\n");
+    for(int i=0;i<num+num2;i++){
+        printf("%d\n",arr[i]);
     }
     return 0;
-   }
+
+ }
