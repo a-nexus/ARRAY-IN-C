@@ -38,42 +38,75 @@
 
 //WRITE A PROGRAM TO SUBTRACT TWO MATRICES.
 
-#include <stdio.h>
+// #include <stdio.h>
 
+// int main(){
+//     int row,column;
+//     printf("ENTER THE NUMBER OF THE ROWS AND COLUMNS:");
+//     scanf("%d%d",&row,&column);
+//     int arr[row][column],arr2[row][column],sub[row][column];
+//     printf("-----FIRST ARRAY-----\n");
+//     for(int i=0;i<row;i++){
+//         for(int j=0;j<column;j++){
+//             printf("ENTER[%d][%d]=",i,j);
+//             scanf("%d",&arr[i][j]);
+//         }
+//     }
+//     printf("-----SECOND ARRAY-----\n");
+//     for(int i=0;i<row;i++){
+//         for(int j=0;j<column;j++){
+//             printf("ENTER[%d][%d]=",i,j);
+//             scanf("%d",&arr2[i][j]);
+//         }
+//     }
+//     printf("-----SUBTRACTED ARRAY-----\n");
+//     for(int i=0;i<row;i++){
+//         for(int j=0;j<column;j++){
+//             sub[i][j]=arr[i][j]-arr2[i][j];
+        
+//         }
+       
+//     }
+//     for(int i=0;i<row;i++){
+//         for(int j=0;j<column;j++){
+          
+//             printf("%d\t",sub[i][j]);
+//         }
+//         printf("\n");
+//     }
+   
+//     return 0;
+// }
+
+//WRITE A PROGRAM TO MULTIPLY TWO MATRICES
+
+#include <stdio.h>
 int main(){
     int row,column;
-    printf("ENTER THE NUMBER OF THE ROWS AND COLUMNS:");
+    printf("ENTER THE NUMBER OF ROWS AND COLUMN:");
     scanf("%d%d",&row,&column);
-    int arr[row][column],arr2[row][column],sub[row][column];
-    printf("-----FIRST ARRAY-----\n");
+    int arr[row][column],arr2[row][column],mul[row][column];
+    printf("-----FIRST MATRIX-----\n");
     for(int i=0;i<row;i++){
         for(int j=0;j<column;j++){
-            printf("ENTER[%d][%d]=",i,j);
+            printf("ENTER [%d][%d]:",i,j);
             scanf("%d",&arr[i][j]);
         }
     }
-    printf("-----SECOND ARRAY-----\n");
+    printf("-----SECOND MATRIX-----\n");
     for(int i=0;i<row;i++){
         for(int j=0;j<column;j++){
-            printf("ENTER[%d][%d]=",i,j);
+            printf("ENTER [%d][%d]:",i,j);
             scanf("%d",&arr2[i][j]);
         }
     }
-    printf("-----SUBTRACTED ARRAY-----\n");
+    printf("-----MULTIPLIED MATRIX-----\n");
     for(int i=0;i<row;i++){
         for(int j=0;j<column;j++){
-            sub[i][j]=arr[i][j]-arr2[i][j];
-        
-        }
-       
-    }
-    for(int i=0;i<row;i++){
-        for(int j=0;j<column;j++){
-          
-            printf("%d\t",sub[i][j]);
+            mul[i][j]=arr[i][j]*arr2[i][j];
+            printf("%d\t",mul[i][j]);
         }
         printf("\n");
     }
-   
     return 0;
 }
