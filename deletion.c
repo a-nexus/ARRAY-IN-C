@@ -180,32 +180,57 @@
 
  //WRITE A PROGRAM TO MERGE TWO ARRAYS.
 
- #include <stdio.h>
+//  #include <stdio.h>
 
- int main(){
-    int num,num2;
-    int arr[100],arr2[100];
-    printf("ENTER THE ELEMENT OF THE 1st AND 2nd ARRAY:");
-    scanf("%d %d",&num,&num2);
-    if(num>=100 || num<=0|| num2>=100 || num2<=0){
-        printf("INVALID INPUT");
+//  int main(){
+//     int num,num2;
+//     int arr[100],arr2[100];
+//     printf("ENTER THE ELEMENT OF THE 1st AND 2nd ARRAY:");
+//     scanf("%d %d",&num,&num2);
+//     if(num>=100 || num<=0|| num2>=100 || num2<=0){
+//         printf("INVALID INPUT");
+//         return 0;
+//     }
+//     printf("------FIRST ARRAY--------\n");
+//     for(int i=0;i<num;i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     printf("------SECOND ARRAY--------\n");
+//     for(int i=0;i<num2;i++){
+//         scanf("%d",&arr2[i]);
+//     }
+//     for(int j=0;j<num+num2;j++){
+//         arr[num+j]=arr2[j];
+//     }
+//     printf("MERGED ARRAY\n");
+//     for(int i=0;i<num+num2;i++){
+//         printf("%d\n",arr[i]);
+//     }
+//     return 0;
+
+//  }
+
+//WRITE A PROGRAM TO SEARCH AN ELEMENT IN AN ARRAY USING LINEAR SEARCH
+
+#include <stdio.h>
+int main(){
+    int num,tarVal;
+    int arr[100];
+    printf("ENTER THE NUMBER OF ELEMENT IN THE ARRAY:");
+    scanf("%d",&num);
+    if(num>=100 || num<=0){
+        printf("INVALID NUMBER");
         return 0;
     }
-    printf("------FIRST ARRAY--------\n");
     for(int i=0;i<num;i++){
         scanf("%d",&arr[i]);
     }
-    printf("------SECOND ARRAY--------\n");
-    for(int i=0;i<num2;i++){
-        scanf("%d",&arr2[i]);
-    }
-    for(int j=0;j<num+num2;j++){
-        arr[num+j]=arr2[j];
-    }
-    printf("MERGED ARRAY\n");
-    for(int i=0;i<num+num2;i++){
-        printf("%d\n",arr[i]);
+    printf("ENTER YOUR TARGETED VALUE:");
+    scanf("%d",&tarVal);
+    for(int i=0;i<num;i++){
+        if(tarVal==arr[i]){
+            printf("YOUR TARGETED VALUE COMES ON %d INDEXED VALUE.\n",i);
+        }
     }
     return 0;
-
- }
+}
